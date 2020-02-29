@@ -14,6 +14,7 @@ module.exports = {
   ],
   plugins: ['prettier', 'jest'],
   rules: {
+    'camelcase': 0,
     'promise/catch-or-return': 'error',
     'prettier/prettier': [
       'error',

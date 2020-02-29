@@ -1,5 +1,4 @@
 import _ from 'lodash'
-import AuthorDao from '../author/author.dao'
 
 /**
  * @description get the number of decimals
@@ -14,12 +13,17 @@ function getDecimals(amount) {
 export default class ResponseHanlder {
   authorCache = {}
   items = []
+  item = null
 
   constructor(response) {
-    this.init(response.results || response)
+    if (response.results) {
+      this.initList(response.results || response)
+    } else {
+      this.initOne(response)
+    }
   }
 
-  init(rawItems) {
+  initList(rawItems) {
     const itemsByAuthor = rawItems.reduce((current, item) => {
       const sellerId = item.seller.id
       const data = current[sellerId]
@@ -29,7 +33,8 @@ export default class ResponseHanlder {
           ...current,
           [sellerId]: {
             ...data,
-            items: [...data.items, this.mapItem(item)]
+            items: [...data.items, this.mapListItem(item)],
+            categories: _.uniq([...data.categories, item.category_id])
           }
         }
       }
@@ -37,8 +42,9 @@ export default class ResponseHanlder {
       return {
         ...current,
         [sellerId]: {
-          author: this.getAuthor(sellerId).catch(() => ({})),
-          items: [this.mapItem(item)]
+          author: sellerId,
+          items: [this.mapListItem(item)],
+          categories: [item.category_id]
         }
       }
     }, {})
@@ -46,35 +52,31 @@ export default class ResponseHanlder {
     this.items = _.values(itemsByAuthor)
   }
 
+  initOne(rawItem) {
+    const sellerId = rawItem.seller_id
+
+    this.item = {
+      author: sellerId,
+      item: this.mapItem(rawItem)
+    }
+  }
+
   /**
-   * @description returns a Array of items promise
+   * @description returns a Array of items
    * @returns {Promise<T>[]}
    */
   getItems() {
     return this.items
   }
 
-  async getAuthor(sellerId) {
-    if (this.authorCache[sellerId]) {
-      return this.authorCache[sellerId]
-    }
-
-    try {
-      const author = await AuthorDao.getOne(sellerId)
-      const [first, ...last] = author.nickname.split(' ')
-
-      this.authorCache[sellerId] = {
-        name: first,
-        lastname: last ? last.join(' ') : ''
-      }
-      return this.authorCache[sellerId]
-    } catch (e) {
-      console.error(e)
-      throw e
-    }
+  /**
+   * @description returns one item
+   */
+  getItem() {
+    return this.item
   }
 
-  mapItem(rawItem) {
+  mapListItem(rawItem) {
     const amount = rawItem.price
     return {
       id: rawItem.id,
@@ -87,6 +89,26 @@ export default class ResponseHanlder {
       picture: rawItem.thumbnail,
       condition: rawItem.condition,
       free_shipping: rawItem.shipping.free_shipping
+    }
+  }
+
+  mapItem(rawItem) {
+    const amount = rawItem.price
+    const [picture] = rawItem.pictures
+
+    return {
+      id: rawItem.id,
+      title: rawItem.title,
+      price: {
+        amount,
+        currency: rawItem.currency_id,
+        decimals: getDecimals(amount)
+      },
+      picture: picture.url,
+      condition: rawItem.condition,
+      free_shipping: rawItem.shipping.free_shipping,
+      sold_quantity: rawItem.sold_quantity,
+      description: ''
     }
   }
 }

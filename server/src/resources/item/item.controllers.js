@@ -1,5 +1,6 @@
 import ItemDao from './item.dao'
 import ResponseHanlder from './response-handler'
+import Utils from './utils'
 
 export default {
   /**
@@ -19,13 +20,16 @@ export default {
 
       const reponseItems = new ResponseHanlder(data).getItems()
       const items = await Promise.all(
-        reponseItems.map(async item => ({ ...item, author: await item.author }))
+        reponseItems.map(async item => ({
+          ...item,
+          author: await Utils.getAuthor(item.author)
+        }))
       )
 
-      res.status(200).json({ data: items })
+      res.status(200).json({ results: items })
     } catch (e) {
       console.error(e)
-      res.status(400).end()
+      res.status(400).end(JSON.stringify(e))
     }
   },
 
@@ -44,10 +48,23 @@ export default {
         return res.status(400).end()
       }
 
-      res.status(200).json({ data })
+      const resItem = new ResponseHanlder(data).getItem()
+
+      const [author, description] = await Promise.all([
+        Utils.getAuthor(resItem.author),
+        Utils.getDescription(id)
+      ])
+
+      const item = {
+        ...resItem,
+        author,
+        description
+      }
+
+      res.status(200).json({ results: item })
     } catch (e) {
       console.error(e)
-      res.status(400).end()
+      res.status(400).end(JSON.stringify(e))
     }
   }
 }

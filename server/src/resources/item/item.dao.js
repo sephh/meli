@@ -20,5 +20,15 @@ export default {
    */
   getOne(id) {
     return axios.get(`${config.mlBaseUrl}/items/${id}`).then(res => res.data)
+  },
+
+  /**
+   * @description returns ML item description by id
+   * @param id
+   */
+  getItemDescription(id) {
+    return axios
+      .get(`${config.mlBaseUrl}/items/${id}/description`)
+      .then(res => res.data)
   }
 }
