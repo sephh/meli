@@ -29,12 +29,18 @@ export default class ResponseHanlder {
       const data = current[sellerId]
 
       if (data) {
+        const currentCategoryCount = data.categories[item.category_id]
         return {
           ...current,
           [sellerId]: {
             ...data,
             items: [...data.items, this.mapListItem(item)],
-            categories: _.uniq([...data.categories, item.category_id])
+            categories: {
+              ...data.categories,
+              [item.category_id]: currentCategoryCount
+                ? currentCategoryCount + 1
+                : 1
+            }
           }
         }
       }
@@ -44,7 +50,9 @@ export default class ResponseHanlder {
         [sellerId]: {
           author: sellerId,
           items: [this.mapListItem(item)],
-          categories: [item.category_id]
+          categories: {
+            [item.category_id]: 1
+          }
         }
       }
     }, {})

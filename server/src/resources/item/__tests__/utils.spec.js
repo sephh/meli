@@ -13,4 +13,9 @@ describe('item utils', () => {
 
     expect(description).toBeTruthy()
   }, 60000)
+
+  test('should parse categories data', async () => {
+    const categories = await Utils.getCategories({ MLA411940: 1 })
+    expect(categories.length).toBeGreaterThan(0)
+  }, 60000)
 })

@@ -22,7 +22,8 @@ export default {
       const items = await Promise.all(
         reponseItems.map(async item => ({
           ...item,
-          author: await Utils.getAuthor(item.author)
+          author: await Utils.getAuthor(item.author),
+          categories: await Utils.getCategories(item.categories)
         }))
       )
 

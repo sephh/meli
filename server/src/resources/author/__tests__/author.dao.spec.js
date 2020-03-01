@@ -3,7 +3,7 @@ import { isFunction } from 'lodash'
 import AuthorDao from '../author.dao'
 
 describe('author dao', () => {
-  test('has controllers', () => {
+  test('has methods', () => {
     const methods = ['getOne']
 
     methods.forEach(name => expect(isFunction(AuthorDao[name])).toBe(true))

@@ -98,7 +98,7 @@ export const RAW_DATA = {
         }
       ],
       original_price: null,
-      category_id: 'MLA65852',
+      category_id: 'MLA411940',
       official_store_id: null,
       catalog_product_id: null,
       tags: [
@@ -127,6 +127,6 @@ export const PARSED_DATA = [
         free_shipping: false
       }
     ],
-    categories: ['MLA65852']
+    categories: { MLA411940: 1 }
   }
 ]
