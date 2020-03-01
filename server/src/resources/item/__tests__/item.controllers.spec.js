@@ -43,5 +43,6 @@ describe('item controllers', () => {
     expect(item).toHaveProperty('item.picture')
     expect(item).toHaveProperty('item.condition')
     expect(item).toHaveProperty('item.free_shipping')
+    expect(item).toHaveProperty('item.description')
   }, 50000)
 })

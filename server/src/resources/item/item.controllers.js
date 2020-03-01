@@ -58,7 +58,10 @@ export default {
       const item = {
         ...resItem,
         author,
-        description
+        item: {
+          ...resItem.item,
+          description
+        }
       }
 
       res.status(200).json({ results: item })

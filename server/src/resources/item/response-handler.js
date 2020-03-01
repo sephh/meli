@@ -5,7 +5,7 @@ import _ from 'lodash'
  * @param amount
  * @returns {number}
  */
-function getDecimals(amount) {
+export function getDecimals(amount) {
   const decimals = amount.toString().split('.')[1]
   return decimals ? decimals.length : 0
 }

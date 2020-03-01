@@ -1,7 +1,7 @@
 import router from '../item.router'
 
 describe('item router', () => {
-  test('has crud routes', () => {
+  test('has routes', () => {
     const routes = [
       { path: '/', method: 'get' },
       { path: '/:id', method: 'get' }
