@@ -46,7 +46,7 @@
 
   &__footer {
     #{$self}__footer-title {
-      margin-bottom: $space-md;
+      margin: $space-md 0;
       font-size: 28px;
       font-weight: 400;
     }
