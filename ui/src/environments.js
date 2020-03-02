@@ -1,12 +1,15 @@
 const ENV = {
   dev: {
-    API: 'http://localhost:3000/api',
+    API: 'http://localhost:4200/api',
+    production: false,
   },
   staging: {
-    API: 'http://localhost:3000/api',
+    API: 'http://localhost:4200/api',
+    production: false,
   },
   prod: {
-    API: 'http://localhost:3000/api',
+    API: 'http://localhost:4200/api',
+    production: true,
   }
 };
 

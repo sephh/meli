@@ -1,0 +1,43 @@
+@import 'node_modules/loaders.css/src/animations/ball-pulse-rise';
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  min-height: 300px;
+  text-align: center;
+  line-height: 1.6rem;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 $space-md;
+
+    .ball-pulse-rise {
+      > div {
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  small {
+    margin: 20px 0 0;
+    display: block;
+    color: $medium-gray;
+    font-weight: normal;
+  }
+
+  h6 {
+    margin: 20px 0 0;
+  }
+
+  h3 {
+    margin: 20px 0 0;
+    text-align: center;
+    display: block;
+  }
+}

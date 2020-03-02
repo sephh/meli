@@ -11,7 +11,15 @@ $blue: #3483fa;
 
 $brand-color: $yellow;
 $primary-color: $blue;
+$info-color: $blue;
+$danger-color: $blue;
+$warning-color: $blue;
+$success-color: $yellow;
 $bg-color: $light-gray;
+
+// BORDER
+$border-radius: 4px;
+$border-default: 1px solid $light-gray;
 
 // SPACING SCHEMA
 
@@ -21,3 +29,26 @@ $space-md: 32px;
 // TEXT
 $font-size-base: 14px;
 $font-color: $black;
+
+// INPUT
+$input-height: 39px;
+$input-height-sm: 32px;
+$input-height-md: $input-height;
+$input-height-lg: 44px;
+
+$input-font-size-sm: $font-size-base;
+$input-font-size-md: 18px;
+$input-font-size-lg: 24px;
+
+// BUTTON
+$button-height-sm: $input-height-sm;
+$button-height-md: $input-height-md;
+$button-height-lg: $input-height-lg;
+
+$button-font-size-sm: $input-font-size-sm;
+$button-font-size-md: $input-font-size-md;
+$button-font-size-lg: $input-font-size-lg;
+
+// BOX-SHADOW
+$box-shadow-default: none;
+

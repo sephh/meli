@@ -1,15 +1,5 @@
 import _ from 'lodash'
 
-/**
- * @description get the number of decimals
- * @param amount
- * @returns {number}
- */
-export function getDecimals(amount) {
-  const decimals = amount.toString().split('.')[1]
-  return decimals ? decimals.length : 0
-}
-
 export default class ResponseHanlder {
   authorCache = {}
   items = []
@@ -65,6 +55,9 @@ export default class ResponseHanlder {
 
     this.item = {
       author: sellerId,
+      categories: {
+        [rawItem.category_id]: 1
+      },
       item: this.mapItem(rawItem)
     }
   }
@@ -91,12 +84,12 @@ export default class ResponseHanlder {
       title: rawItem.title,
       price: {
         amount,
-        currency: rawItem.currency_id,
-        decimals: getDecimals(amount)
+        currency: rawItem.currency_id
       },
       picture: rawItem.thumbnail,
       condition: rawItem.condition,
-      free_shipping: rawItem.shipping.free_shipping
+      free_shipping: rawItem.shipping.free_shipping,
+      state_name: rawItem.address.state_name
     }
   }
 
@@ -109,8 +102,7 @@ export default class ResponseHanlder {
       title: rawItem.title,
       price: {
         amount,
-        currency: rawItem.currency_id,
-        decimals: getDecimals(amount)
+        currency: rawItem.currency_id
       },
       picture: picture.url,
       condition: rawItem.condition,

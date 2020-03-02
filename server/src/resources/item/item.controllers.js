@@ -20,10 +20,15 @@ export default {
 
       const reponseItems = new ResponseHanlder(data).getItems()
       const items = await Promise.all(
-        reponseItems.map(async item => ({
-          ...item,
-          author: await Utils.getAuthor(item.author),
-          categories: await Utils.getCategories(item.categories)
+        reponseItems.map(async r => ({
+          items: await Promise.all(
+            r.items.map(async item => ({
+              ...item,
+              price: await Utils.getPrice(item.price)
+            }))
+          ),
+          author: await Utils.getAuthor(r.author),
+          categories: await Utils.getCategories(r.categories)
         }))
       )
 
@@ -51,17 +56,20 @@ export default {
 
       const resItem = new ResponseHanlder(data).getItem()
 
-      const [author, description] = await Promise.all([
+      const [author, description, categories] = await Promise.all([
         Utils.getAuthor(resItem.author),
-        Utils.getDescription(id)
+        Utils.getDescription(id),
+        Utils.getCategories(resItem.categories)
       ])
 
       const item = {
         ...resItem,
         author,
+        categories,
         item: {
           ...resItem.item,
-          description
+          description,
+          price: await Utils.getPrice(resItem.item.price)
         }
       }
 

@@ -120,11 +120,12 @@ export const PARSED_DATA = [
       {
         id: 'MLA758701025',
         title: 'Vela Kayak Sail 118 Cm Bolso Canoa Kayak Tabla Sup Inflable',
-        price: { amount: 1690.65, currency: 'ARS', decimals: 2 },
+        price: { amount: 1690.65, currency: 'ARS'},
         picture:
           'http://mla-s2-p.mlstatic.com/679688-MLA31036336393_062019-I.jpg',
         condition: 'new',
-        free_shipping: false
+        free_shipping: false,
+        state_name: 'Buenos Aires',
       }
     ],
     categories: { MLA411940: 1 }

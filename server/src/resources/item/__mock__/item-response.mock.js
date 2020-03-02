@@ -354,13 +354,13 @@ export const PARSED_DATA = {
     title: 'Tabla De Skate Prof. Century + Lija. Envíos A Todo El País.',
     price: {
       amount: 1499,
-      currency: 'ARS',
-      decimals: 0
+      currency: 'ARS'
     },
     picture: 'http://mla-s2-p.mlstatic.com/649995-MLA32894930389_112019-O.jpg',
     condition: 'new',
     free_shipping: false,
     sold_quantity: 500,
     description: ''
-  }
+  },
+  categories: { MLA433411: 1 }
 }

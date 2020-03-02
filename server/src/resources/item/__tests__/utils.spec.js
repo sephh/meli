@@ -18,4 +18,11 @@ describe('item utils', () => {
     const categories = await Utils.getCategories({ MLA411940: 1 })
     expect(categories.length).toBeGreaterThan(0)
   }, 60000)
+
+  test('should parse currency data', async () => {
+    const price = await Utils.getPrice({ currency: 'ARS', amount: 0 })
+    expect(price).toHaveProperty('currency')
+    expect(price).toHaveProperty('amount')
+    expect(price).toHaveProperty('decimals')
+  }, 60000)
 })

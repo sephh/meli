@@ -1,12 +1,17 @@
 import { createSelector } from 'reselect'
-import { normalize } from 'normalizr'
 import { createActions, handleActions } from 'redux-actions'
-import _ from 'lodash'
+import axios from 'axios'
+import getEnv from '../environments'
+
+const { API } = getEnv()
 
 const defaultState = {
   selectedItem: null,
   items: {},
-  ids: []
+  ids: [],
+  authors: [],
+  categories: [],
+  loadingItems: false
 }
 
 /** ACTIONS */
@@ -14,13 +19,51 @@ const defaultState = {
 const actionsCreator = createActions({
 
   ITEM: {
-    FETCH_SELECTED_ITEM: ({ item }) => {
+    SET_LOADING_ITEMS: ({ loading }) => {
+      return { loading }
     },
-    FETCH_ITEMS: ({ items }) => {
-      if (!items) {
-        return { items: null }
-      }
-      return { items, ids: Object.keys(items) }
+    FETCH_SELECTED_ITEM: ({ item }) => {
+      return { item }
+    },
+    FETCH_ITEMS: ({ items: initialItems }) => {
+      const { items, authors, categories, ids } = initialItems.reduce((current, item) => {
+        const { author, items: currentItems, categories: currentCategories } = item
+        const itemsMap = {}
+        const currentIds = []
+
+        for (let i = 0; i < currentItems.length; i++) {
+          const id = currentItems[i].id
+          itemsMap[id] = currentItems[i]
+          currentIds.push(id)
+        }
+
+        return {
+          ids: [
+            ...current.ids,
+            ...currentIds
+          ],
+          items: {
+            ...current.items,
+            ...itemsMap
+          },
+          authors: [
+            ...current.authors,
+            {
+              ...author,
+              items: currentIds
+            }
+          ],
+          categories: [
+            ...current.categories,
+            {
+              labels: currentCategories,
+              items: currentIds
+            }
+          ]
+        }
+      }, { authors: [], items: {}, ids: [], categories: [] })
+
+      return { items, authors, ids, categories }
     }
   }
 
@@ -28,45 +71,42 @@ const actionsCreator = createActions({
 
 const {
   fetchItems,
-  fetchSelectedItem
+  fetchSelectedItem,
+  setLoadingItems
 } = actionsCreator.item
 
 const actions = {
 
-  getItem: (variables = {}) => async dispatch => {
+  getItem: ({ id = '' }) => async dispatch => {
+    dispatch(setLoadingItems({ loading: true }))
+
     try {
-      dispatch(updateRequestStatus({ requestStatus: enums.requestStatus.Loading }))
+      const { data } = await axios.get(`${API}/items/${id}`)
 
-      const { entities } = await dao.getItems(variables)
-        .then(res => normalize(res.data.Me, USER_SCHEMA))
-      const { items } = entities
+      dispatch(fetchSelectedItem({ item: data.results }))
+      dispatch(setLoadingItems({ loading: false }))
 
-      dispatch(updateRequestStatus({ requestStatus: enums.requestStatus.SuccessToLoading }))
-      dispatch(fetchItems({ items }))
-
-      return entities.items
+      return data
     } catch (e) {
       console.log(e)
-      dispatch(updateRequestStatus({ requestStatus: enums.requestStatus.FailToLoading }))
+      dispatch(setLoadingItems({ loading: false }))
       throw e
     }
   },
 
-  getItems: (variables = {}) => async dispatch => {
+  getItems: ({ query = '' }) => async dispatch => {
+    dispatch(setLoadingItems({ loading: true }))
+
     try {
-      dispatch(updateRequestStatus({ requestStatus: enums.requestStatus.Loading }))
+      const { data } = await axios.get(`${API}/items?q=${query}`)
 
-      const { entities } = await dao.getItems(variables)
-        .then(res => normalize(res.data.Me, USER_SCHEMA))
-      const { items } = entities
+      dispatch(fetchItems({ items: data.results }))
+      dispatch(setLoadingItems({ loading: false }))
 
-      dispatch(updateRequestStatus({ requestStatus: enums.requestStatus.SuccessToLoading }))
-      dispatch(fetchItems({ items }))
-
-      return entities.items
+      return data
     } catch (e) {
       console.log(e)
-      dispatch(updateRequestStatus({ requestStatus: enums.requestStatus.FailToLoading }))
+      dispatch(setLoadingItems({ loading: false }))
       throw e
     }
   }
@@ -81,30 +121,62 @@ const items = createSelector(
     .map(id => item.items[id])
 )
 
-const getItemById = state => id => createSelector(
-  items,
-  (_, id) => id,
-  (data, id) => data.find(f => f.id === id)
-)(state, id)
+const selectedItem = createSelector(
+  state => state.item,
+  itemState => itemState.selectedItem
+)
+
+const authors = createSelector(
+  state => state.item,
+  itemState => itemState.authors
+)
+
+const getItemAuthor = state => idItem => createSelector(
+  authors,
+  (_, idItem) => idItem,
+  (data, idItem) => data.find(author => author.items.some(id => id === idItem))
+)(state, idItem)
+
+const categories = createSelector(
+  state => state.item,
+  itemState => itemState.categories,
+)
+
+const getItemCategories = state => idItem => createSelector(
+  categories,
+  (_, idItem) => idItem,
+  (data, idItem) => {
+    const category = data.find(c => c.items.some(id => id === idItem));
+    return category ? category.labels : []
+  }
+)(state, idItem)
+
+const loadingItems = createSelector(
+  state => state.item,
+  itemState => itemState.loadingItems,
+)
 
 const selectors = {
   items,
-  getItemById
+  selectedItem,
+  authors,
+  getItemAuthor,
+  categories,
+  getItemCategories,
+  loadingItems
 }
 
 /** REDUCER */
 
 const reducer = handleActions(
   {
-    [fetchItems]: (state, { payload: { items, ids } }) => {
-      if (!items) {
-        return state
-      }
-
+    [fetchItems]: (state, { payload: { items, authors, ids, categories } }) => {
       return {
         ...state,
-        ids: _.union(state.ids, ids),
-        items: { ...state.items, ...items }
+        ids,
+        items,
+        authors,
+        categories
       }
     },
     [fetchSelectedItem]: (state, { payload: { item } }) => {
@@ -114,7 +186,13 @@ const reducer = handleActions(
 
       return {
         ...state,
-        item
+        selectedItem: item
+      }
+    },
+    [setLoadingItems]: (state, { payload: { loading } }) => {
+      return {
+        ...state,
+        loadingItems: loading
       }
     }
   },
