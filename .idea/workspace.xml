@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="33e7f0ef-c3f9-4509-819b-5c8caeebc26c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/meli.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.prettierrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/nodemon.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/__tests__/server.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/config/dev.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/config/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/config/prod.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/config/testing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/resources/item/__tests__/item.controllers.spec..js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/resources/item/__tests__/item.router.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/resources/item/item.controllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/resources/item/item.router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/test-db-setup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/yarn.lock" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1YPWke1hqh4cPyGupyOx7EmGwae" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33e7f0ef-c3f9-4509-819b-5c8caeebc26c" name="Default Changelist" comment="" />
+      <created>1582844853858</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582844853858</updated>
+      <workItem from="1582844856753" duration="2498000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
