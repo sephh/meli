@@ -5,7 +5,7 @@ const baseConfig = {
   env,
   isDev: env === 'development',
   isTest: env === 'testing',
-  port: 3000,
+  port: 4200,
   mlBaseUrl: 'https://api.mercadolibre.com'
 }
 

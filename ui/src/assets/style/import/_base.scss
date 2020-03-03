@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body{
+  font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+  background-color: $bg-color;
+  font-size: $font-size-base;
+  color: $font-color;
+  font-weight: 300;
+}
+
+.container{
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+p{
+  line-height: 1.3;
+}

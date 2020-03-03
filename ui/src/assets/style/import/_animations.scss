@@ -1,0 +1,16 @@
+.animated {
+  $duration: .5s;
+
+  &--fadeIn {
+    animation: fadein $duration cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
