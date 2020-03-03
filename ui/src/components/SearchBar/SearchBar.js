@@ -23,7 +23,7 @@ const SearchBar = ({ value: initialValue, onChange }) => {
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <form data-testid='form' onSubmit={onSubmit}>
 
       <div className='search-bar'>
 

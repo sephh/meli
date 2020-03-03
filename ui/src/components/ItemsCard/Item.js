@@ -6,6 +6,18 @@ import { Link } from 'react-router-dom'
 import price from '../../filters/price'
 
 const Item = ({ item }) => {
+  const handleFreeShipping = () => {
+    if (item.free_shipping) {
+      return (
+        <span className='item__free-shipping'>
+          <img src={freeShippingImage} alt={'Free Shipping'}/>
+        </span>
+      )
+    }
+
+    return null
+  }
+
   return (
     <Link to={`/items/${item.id}`} className='item'>
 
@@ -22,12 +34,7 @@ const Item = ({ item }) => {
           <div className='item__content-price'>
             {item.price.currency} {price(item.price.amount)}
 
-            {
-              item.free_shipping &&
-              <span className='item__free-shipping'>
-                <img src={freeShippingImage} alt={'Free Shipping'}/>
-              </span>
-            }
+            {handleFreeShipping()}
           </div>
 
           <div className='item__content-state'>

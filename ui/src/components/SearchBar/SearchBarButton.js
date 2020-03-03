@@ -7,6 +7,7 @@ const SearchBarButton = ({onClick}) => {
   return (
     <button
       className={'search-bar-button ml-btn'}
+      type='submit'
       onClick={e => onClick(e)}
     >
       <img src={searchIcon} alt={'Search Icon'}/>
@@ -15,7 +16,7 @@ const SearchBarButton = ({onClick}) => {
 }
 
 SearchBarButton.propTypes = {
-  onPress: PropTypes.func
+  onClick: PropTypes.func
 }
 
 SearchBarButton.defaultProps = {

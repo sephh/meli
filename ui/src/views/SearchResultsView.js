@@ -21,9 +21,9 @@ class SearchResultsView extends Component {
 
   requestItems = () => {
     const { getItems, location } = this.props
-    const { q } = queryString.parse(location.search)
+    const { search } = queryString.parse(location.search)
 
-    getItems(q)
+    getItems(search)
   }
 
   render() {

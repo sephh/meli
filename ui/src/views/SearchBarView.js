@@ -6,7 +6,7 @@ import SearchBar from '../components/SearchBar'
 class SearchBarView extends Component {
   requestItems = (query) => {
     const { history } = this.props
-    history.push(`/items?q=${_.deburr(query)}`)
+    history.push(`/items?search=${_.deburr(query)}`)
   }
 
   render() {

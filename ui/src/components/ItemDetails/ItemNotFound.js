@@ -5,7 +5,10 @@ const ItemNotFound = () => {
   return (
     <div className='item-not-found'>
       <div className='text-center'>
-        <span className="fas fa-5x fa-exclamation-triangle"/>
+        <span
+          className="fas fa-5x fa-exclamation-triangle"
+          data-testid="warningIcon"
+        />
       </div>
 
       <div className='text-center item-not-found__message'>
