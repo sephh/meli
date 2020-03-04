@@ -16,6 +16,47 @@ const defaultState = {
 
 /** ACTIONS */
 
+export const parseItems = ({ items: initialItems }) => {
+  const { items, authors, categories, ids } = initialItems.reduce((current, item) => {
+    const { author, items: currentItems, categories: currentCategories } = item
+    const itemsMap = {}
+    const currentIds = []
+
+    for (let i = 0; i < currentItems.length; i++) {
+      const id = currentItems[i].id
+      itemsMap[id] = currentItems[i]
+      currentIds.push(id)
+    }
+
+    return {
+      ids: [
+        ...current.ids,
+        ...currentIds
+      ],
+      items: {
+        ...current.items,
+        ...itemsMap
+      },
+      authors: [
+        ...current.authors,
+        {
+          ...author,
+          items: currentIds
+        }
+      ],
+      categories: [
+        ...current.categories,
+        {
+          labels: currentCategories,
+          items: currentIds
+        }
+      ]
+    }
+  }, { authors: [], items: {}, ids: [], categories: [] })
+
+  return { items, authors, ids, categories }
+}
+
 const actionsCreator = createActions({
 
   ITEM: {
@@ -25,46 +66,7 @@ const actionsCreator = createActions({
     FETCH_SELECTED_ITEM: ({ item }) => {
       return { item }
     },
-    FETCH_ITEMS: ({ items: initialItems }) => {
-      const { items, authors, categories, ids } = initialItems.reduce((current, item) => {
-        const { author, items: currentItems, categories: currentCategories } = item
-        const itemsMap = {}
-        const currentIds = []
-
-        for (let i = 0; i < currentItems.length; i++) {
-          const id = currentItems[i].id
-          itemsMap[id] = currentItems[i]
-          currentIds.push(id)
-        }
-
-        return {
-          ids: [
-            ...current.ids,
-            ...currentIds
-          ],
-          items: {
-            ...current.items,
-            ...itemsMap
-          },
-          authors: [
-            ...current.authors,
-            {
-              ...author,
-              items: currentIds
-            }
-          ],
-          categories: [
-            ...current.categories,
-            {
-              labels: currentCategories,
-              items: currentIds
-            }
-          ]
-        }
-      }, { authors: [], items: {}, ids: [], categories: [] })
-
-      return { items, authors, ids, categories }
-    }
+    FETCH_ITEMS: parseItems
   }
 
 })
@@ -109,7 +111,9 @@ const actions = {
       dispatch(setLoadingItems({ loading: false }))
       throw e
     }
-  }
+  },
+
+  setLoadingItems
 
 }
 
