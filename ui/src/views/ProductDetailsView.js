@@ -21,7 +21,6 @@ class ProductDetailsView extends Component {
 
   handleRender = () => {
     const { breadcrumbsLinks, loading, selectedItem } = this.props
-    console.log('RENDER', loading);
 
     if(loading){
       return <Loading message={'Estamos encontrando su producto...'}/>
