@@ -19,40 +19,44 @@ class ProductDetailsView extends Component {
     getItem(id)
   }
 
-  render() {
+  handleRender = () => {
     const { breadcrumbsLinks, loading, selectedItem } = this.props
+    console.log('RENDER', loading);
 
+    if(loading){
+      return <Loading message={'Estamos encontrando su producto...'}/>
+    }
+
+    return <div className='product-details-view animated animated--fadeIn'>
+
+      <div className='container'>
+
+        <Breadcrumbs
+          links={breadcrumbsLinks}
+        />
+
+        {
+          selectedItem &&
+          <ItemDetails
+            item={selectedItem}
+          />
+        }
+
+        {
+          !selectedItem && !loading &&
+          <ItemNotFound/>
+        }
+
+
+      </div>
+
+    </div>
+  }
+
+  render() {
     return (
       <Fragment>
-        {
-          loading
-            ? <Loading message={'Estamos encontrando su producto...'}/>
-            :
-            <div className='product-details-view animated animated--fadeIn'>
-
-              <div className='container'>
-
-                <Breadcrumbs
-                  links={breadcrumbsLinks}
-                />
-
-                {
-                  selectedItem &&
-                  <ItemDetails
-                    item={selectedItem}
-                  />
-                }
-
-                {
-                  !selectedItem && !loading &&
-                  <ItemNotFound/>
-                }
-
-
-              </div>
-
-            </div>
-        }
+        {this.handleRender()}
       </Fragment>
     )
   }

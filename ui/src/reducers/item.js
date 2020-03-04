@@ -190,6 +190,7 @@ const reducer = handleActions(
       }
     },
     [setLoadingItems]: (state, { payload: { loading } }) => {
+      console.log('REDUX', loading)
       return {
         ...state,
         loadingItems: loading

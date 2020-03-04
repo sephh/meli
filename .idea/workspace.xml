@@ -2,34 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33e7f0ef-c3f9-4509-819b-5c8caeebc26c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/meli.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/.prettierrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/nodemon.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/__tests__/server.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/config/dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/config/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/config/prod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/config/testing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/resources/item/__tests__/item.controllers.spec..js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/resources/item/__tests__/item.router.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/resources/item/item.controllers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/resources/item/item.router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/test-db-setup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/__mock__/item-response.mock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/shared/__tests__/Breadcrumbs.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/shared/__tests__/DelayedInput.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/shared/__tests__/Loading.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/views/__test__/ProductDetailsView.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/meli.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/meli.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/reducers/item.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/reducers/item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/views/ProductDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/views/ProductDetailsView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +29,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1YPWke1hqh4cPyGupyOx7EmGwae" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -58,6 +46,8 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -82,7 +72,16 @@
       <option name="presentableId" value="Default" />
       <updated>1582844853858</updated>
       <workItem from="1582844856753" duration="2498000" />
+      <workItem from="1583269884485" duration="10295000" />
     </task>
+    <task id="LOCAL-00001" summary="workspace">
+      <created>1583269944597</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583269944597</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,10 +92,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace" />
   </component>
 </project>
