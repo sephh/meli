@@ -16,9 +16,59 @@ export const ITEM_RESPONSE_MOCK = {
         condition: 'new',
         free_shipping: false,
         sold_quantity: 500,
-        description: ''
+        description: 'Produto muito bonito'
       },
       categories: ['Category 1', 'Category 2']
     }
+  }
+}
+
+export const ITEM_LIST_RESPONSE_1 = {
+  data: {
+    results: [
+      {
+        author: {
+          name: 'Severino'
+        },
+        items: [
+          {
+            id: 'MLA758701025',
+            title: 'Carabina com pontaria certeira',
+            price: { amount: 1690.65, currency: '$', decimals: 2},
+            picture:
+              'http://mla-s2-p.mlstatic.com/679688-MLA31036336393_062019-I.jpg',
+            condition: 'new',
+            free_shipping: true,
+            state_name: 'Buenos Aires',
+          }
+        ],
+        categories: ['Category 1', 'Category 2']
+      }
+    ]
+  }
+}
+
+export const ITEM_LIST_RESPONSE_2 = {
+  data: {
+    results: [
+      {
+        author: {
+          name: 'Maria Bonita'
+        },
+        items: [
+          {
+            id: 'MLA758701035',
+            title: 'Peixeira bem afiada',
+            price: { amount: 50.65, currency: '$', decimals: 2},
+            picture:
+              'http://mla-s2-p.mlstatic.com/679688-MLA31036336393_062019-I.jpg',
+            condition: 'new',
+            free_shipping: true,
+            state_name: 'Buenos Aires',
+          }
+        ],
+        categories: ['Category 1', 'Category 2']
+      }
+    ]
   }
 }

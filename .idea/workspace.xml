@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33e7f0ef-c3f9-4509-819b-5c8caeebc26c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ui/src/views/__test__/SearchBarView.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/views/__test__/SearchResultsView.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/reducers/item.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/reducers/item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/views/ProductDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/views/ProductDetailsView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/__mock__/item-response.mock.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/__mock__/item-response.mock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/src/views/__test__/ProductDetailsView.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/views/__test__/ProductDetailsView.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,6 +68,7 @@
       <updated>1582844853858</updated>
       <workItem from="1582844856753" duration="2498000" />
       <workItem from="1583269884485" duration="11142000" />
+      <workItem from="1583300564031" duration="4404000" />
     </task>
     <task id="LOCAL-00001" summary="workspace">
       <created>1583269944597</created>
