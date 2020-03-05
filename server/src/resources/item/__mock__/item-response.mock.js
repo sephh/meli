@@ -21,9 +21,9 @@ export const RAW_DATA = {
   condition: 'new',
   permalink:
     'https://articulo.mercadolibre.com.ar/MLA-614344429-tabla-de-skate-prof-century-lija-envios-a-todo-el-pais-_JM',
-  thumbnail: 'http://mla-s2-p.mlstatic.com/649995-MLA32894930389_112019-I.jpg',
+  thumbnail: 'http://mla-s2-p.mlstatic.com/649995-MLA32894930389_112019-N.jpg',
   secure_thumbnail:
-    'https://mla-s2-p.mlstatic.com/649995-MLA32894930389_112019-I.jpg',
+    'https://mla-s2-p.mlstatic.com/649995-MLA32894930389_112019-N.jpg',
   pictures: [
     {
       id: '649995-MLA32894930389_112019',

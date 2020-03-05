@@ -1,36 +1,48 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { applyMiddleware, combineReducers, createStore } from 'redux'
-import { MemoryRouter, Route } from 'react-router-dom'
 import thunk from 'redux-thunk'
 import axiosMock from 'axios'
 import { render, wait } from '@testing-library/react'
 
 import reducers from '../../reducers'
 import ProductDetailsView from '../ProductDetailsView'
-import { ITEM_RESPONSE_MOCK } from '../../../__mock__/item-response.mock'
+import { ITEM_RESPONSE_MOCK } from '../../__mock__/item-response.mock'
 
 import getEnv from '../../environments'
 import item from '../../reducers/item'
 import price from '../../filters/price'
+import Router from 'next/router'
+import { withTestRouter } from '../../__mock__/next-test-router'
+import '../../styles/fontawesome'
 
 jest.mock('axios')
+
+const mockedRouter = {
+  push: () => {
+  }, prefetch: () => {
+  }
+}
+Router.router = mockedRouter
 
 const store = createStore(
   combineReducers({
     ...reducers
   }),
-  applyMiddleware(thunk),
+  applyMiddleware(thunk)
 )
 
 const renderWithRedux = (
-  ui
+  { ui: Component }
 ) => {
   return {
     ...render(<Provider store={store}>
-      <MemoryRouter initialEntries={['/items/abc']} initialIndex={0}>
-        <Route path={'/items/:id'} component={ui}/>
-      </MemoryRouter>
+      {withTestRouter(<Component/>, {
+        route: '/items',
+        pathname: '/items',
+        query: { id: 'carabina' },
+        asPath: '/items'
+      })}
     </Provider>),
     store
   }
@@ -42,14 +54,14 @@ describe('ProductDetailsView', () => {
 
     const env = getEnv()
 
-    const { getByAltText, getByText } = renderWithRedux(ProductDetailsView)
+    const { getByAltText, getByText } = renderWithRedux({ ui: ProductDetailsView })
 
     expect(getByText('Estamos encontrando su producto...')).toBeInTheDocument()
     expect(axiosMock.get).toHaveBeenCalledTimes(1)
-    expect(axiosMock.get).toHaveBeenCalledWith(`${env.API}/items/abc`)
+    expect(axiosMock.get).toHaveBeenCalledWith(`${env.API}/items/carabina`)
 
     // wait async process
-    await wait(undefined, {timeout:0})
+    await wait(undefined, { timeout: 0 })
 
     const selectedItem = item.selectors.selectedItem(store.getState())
     const conditionText = `${selectedItem.item.condition} - ${selectedItem.item.sold_quantity} vendidos`

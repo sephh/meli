@@ -1,12 +1,11 @@
 import React from 'react'
-import { MemoryRouter } from 'react-router-dom'
 import { fireEvent, render } from '@testing-library/react'
 
 import SearchBar from '../SearchBar'
 
 describe('SearchBar', () => {
   test('should render logo', () => {
-    const { getByAltText } = render(<SearchBar/>, { wrapper: MemoryRouter })
+    const { getByAltText } = render(<SearchBar/>)
 
     const logo = getByAltText('Logomarca')
 
@@ -14,7 +13,7 @@ describe('SearchBar', () => {
   })
 
   test('should render search input', () => {
-    const { getByPlaceholderText } = render(<SearchBar/>, { wrapper: MemoryRouter })
+    const { getByPlaceholderText } = render(<SearchBar/>)
 
     const searchInput = getByPlaceholderText('Nunca dejes de buscar')
 
@@ -22,7 +21,7 @@ describe('SearchBar', () => {
   })
 
   test('should render search button', () => {
-    const { getByAltText } = render(<SearchBar/>, { wrapper: MemoryRouter })
+    const { getByAltText } = render(<SearchBar/>)
 
     const searchButton = getByAltText('Search Icon')
 
@@ -33,7 +32,7 @@ describe('SearchBar', () => {
     const mockOnChange = jest.fn(v => v)
     const inputValue = 'any thing'
 
-    const { getByTestId } = render(<SearchBar value={inputValue} onChange={mockOnChange}/>, { wrapper: MemoryRouter })
+    const { getByTestId } = render(<SearchBar value={inputValue} onChange={mockOnChange}/>)
 
     fireEvent.submit(getByTestId('form'))
 
@@ -46,7 +45,7 @@ describe('SearchBar', () => {
     const mockOnChange = jest.fn(v => v)
     const inputValue = ''
 
-    const { getByTestId } = render(<SearchBar value={inputValue} onChange={mockOnChange}/>, { wrapper: MemoryRouter })
+    const { getByTestId } = render(<SearchBar value={inputValue} onChange={mockOnChange}/>)
 
     fireEvent.submit(getByTestId('form'))
 

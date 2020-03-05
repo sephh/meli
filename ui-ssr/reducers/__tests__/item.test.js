@@ -2,10 +2,10 @@ import { applyMiddleware, combineReducers, createStore } from 'redux'
 import thunk from 'redux-thunk'
 import axiosMock from 'axios'
 
-import { ITEM_REDUCER_STATE } from '../../../__mock__/reducers.mock'
+import { ITEM_REDUCER_STATE } from '../../__mock__/reducers.mock'
 import reducers from '../index'
 import item, { parseItems } from '../item'
-import { ITEM_LIST_RESPONSE_1, ITEM_RESPONSE_MOCK } from '../../../__mock__/item-response.mock'
+import { ITEM_LIST_RESPONSE_1, ITEM_RESPONSE_MOCK } from '../../__mock__/item-response.mock'
 import getEnv from '../../environments'
 
 jest.mock('axios')

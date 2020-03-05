@@ -1,21 +1,11 @@
-# Next.js + Jest
+# UI Server Side Render
 
-This example shows how to configure Jest to work with Next.js.
+## Installation Instructions and Launch
 
-This includes Next.js' built-in support for Global CSS, CSS Modules, and TypeScript!
+To install and launching this app follow this steps:
 
-## How to Use
-
-Quickly get started using [Create Next App](https://github.com/zeit/next.js/tree/canary/packages/create-next-app#readme)!
-
-In your terminal, run the following command:
-
-```bash
-npx create-next-app --example with-jest
 ```
-
-## Run Jest Tests
-
-```bash
-npm test
+$ npm install
+$ npm run build
+$ npm start
 ```

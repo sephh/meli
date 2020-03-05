@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { ITEM_REDUCER_STATE } from '../../../../__mock__/reducers.mock'
+import { ITEM_REDUCER_STATE } from '../../../__mock__/reducers.mock'
 import ItemDetails from '../ItemDetails'
 import price from '../../../filters/price'
 

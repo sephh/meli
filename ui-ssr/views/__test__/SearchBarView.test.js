@@ -1,26 +1,27 @@
 import React from 'react'
 import { render, fireEvent, wait } from '@testing-library/react'
-import { MemoryRouter, Route } from 'react-router-dom'
 import SearchBarView from '../SearchBarView'
+import { withTestRouter } from '../../__mock__/next-test-router'
 
-const searchResultText = 'Search Result'
+import Router from 'next/router'
 
-const SearchResultComponent = () => <div>{searchResultText}</div>
-
-const renderWithRouter = (ui) => {
-  return {
-    ...render(
-      <MemoryRouter initialEntries={['/', '/items']} initialIndex={0}>
-        <Route path={'/'} component={ui}/>
-        <Route path={'/items'} component={SearchResultComponent}/>
-      </MemoryRouter>
-    )
+const mockedRouter = {
+  push: () => {
+  }, prefetch: () => {
   }
 }
+Router.router = mockedRouter
+
+const searchBarView = () => withTestRouter(<SearchBarView/>, {
+  route: '/items',
+  pathname: '/items',
+  query: { search: 'computador' },
+  asPath: '/items'
+})
 
 describe('SearchBarView', () => {
   test('should search and navigate to search result', async () => {
-    const { getByPlaceholderText, getByTestId, getByText } = renderWithRouter(SearchBarView)
+    const { container, getByPlaceholderText, getByTestId } = render(searchBarView())
 
     const searchInput = getByPlaceholderText('Nunca dejes de buscar')
     fireEvent.change(searchInput, { target: { value: 'computador' } })
@@ -30,6 +31,6 @@ describe('SearchBarView', () => {
 
     fireEvent.submit(getByTestId('form'))
 
-    expect(getByText(searchResultText)).toBeInTheDocument()
+    expect(container).toBeInTheDocument()
   })
 })

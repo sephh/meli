@@ -1,19 +1,27 @@
 import React from 'react'
-import { fireEvent, render, wait } from '@testing-library/react'
+import { render, wait } from '@testing-library/react'
 import { Provider } from 'react-redux'
 import { applyMiddleware, combineReducers, createStore } from 'redux'
-import { MemoryRouter, Route } from 'react-router-dom'
+import Router from 'next/router'
+
 import thunk from 'redux-thunk'
 import axiosMock from 'axios'
 
-import SearchBarView from '../SearchBarView'
-
 import reducers from '../../reducers'
 import SearchResultsView from '../SearchResultsView'
-import { ITEM_LIST_RESPONSE_1, ITEM_LIST_RESPONSE_2 } from '../../../__mock__/item-response.mock'
+import { ITEM_LIST_RESPONSE_1 } from '../../__mock__/item-response.mock'
+import { withTestRouter } from '../../__mock__/next-test-router'
 import getEnv from '../../environments'
 import item from '../../reducers/item'
 import price from '../../filters/price'
+import '../../styles/fontawesome'
+
+const mockedRouter = {
+  push: () => {
+  }, prefetch: () => {
+  }
+}
+Router.router = mockedRouter
 
 jest.mock('axios')
 
@@ -25,14 +33,16 @@ const store = createStore(
 )
 
 const renderWithRedux = (
-  ui
+  { ui: Component }
 ) => {
   return {
     ...render(<Provider store={store}>
-      <MemoryRouter initialEntries={['/items?search=carabina']} initialIndex={0}>
-        <Route path={'/'} component={SearchBarView}/>
-        <Route path={'/items'} component={ui}/>
-      </MemoryRouter>
+      {withTestRouter(<Component/>, {
+        route: '/items',
+        pathname: '/items',
+        query: { search: 'carabina' },
+        asPath: '/items'
+      })}
     </Provider>),
     store
   }
@@ -64,28 +74,11 @@ describe('SearchResultsView', () => {
 
     const env = getEnv()
 
-    const { getByText, getByPlaceholderText, getByTestId, getByAltText } = renderWithRedux(SearchResultsView)
+    const { getByText, getByAltText } = renderWithRedux({ ui: SearchResultsView })
 
     expect(getByText('Estamos encontrando su producto...')).toBeInTheDocument()
     expect(axiosMock.get).toHaveBeenCalledTimes(1)
     expect(axiosMock.get).toHaveBeenCalledWith(`${env.API}/items?q=carabina`)
-
-    await listTestBuilder({ getByText, getByAltText })
-
-    // Change search
-    const searchInput = getByPlaceholderText('Nunca dejes de buscar')
-    fireEvent.change(searchInput, { target: { value: 'peixeira' } })
-
-    // wait delayed input
-    await wait(undefined, { timeout: 0 })
-
-    axiosMock.get.mockResolvedValueOnce(ITEM_LIST_RESPONSE_2)
-
-    fireEvent.submit(getByTestId('form'))
-
-    expect(getByText('Estamos encontrando su producto...')).toBeInTheDocument()
-    expect(axiosMock.get).toHaveBeenCalledTimes(2)
-    expect(axiosMock.get).toHaveBeenCalledWith(`${env.API}/items?q=peixeira`)
 
     await listTestBuilder({ getByText, getByAltText })
   })

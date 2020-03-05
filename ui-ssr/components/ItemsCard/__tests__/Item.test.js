@@ -1,11 +1,10 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom'
 
 import Item from '../Item'
 import item from '../../../reducers/item'
 
-import { ITEM_REDUCER_STATE } from '../../../../__mock__/reducers.mock'
+import { ITEM_REDUCER_STATE } from '../../../__mock__/reducers.mock'
 import price from '../../../filters/price'
 
 describe('Item', () => {
@@ -16,7 +15,7 @@ describe('Item', () => {
     const [firstItem] = item.selectors.items({ item: ITEM_REDUCER_STATE })
 
     itemData = { ...firstItem }
-    renderResult = render(<Item item={firstItem}/>, { wrapper: MemoryRouter })
+    renderResult = render(<Item item={firstItem}/>)
   })
 
   test('should render image', () => {

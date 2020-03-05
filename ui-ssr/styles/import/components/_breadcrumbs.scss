@@ -13,7 +13,7 @@
       font-size: 14px;
     }
 
-    .fas {
+    .svg-inline--fa {
       color: $medium-gray;
       font-size: 12px;
       margin: 0 8px;
@@ -22,7 +22,7 @@
     &:last-child {
       font-weight: 400;
 
-      .fas {
+      .svg-inline--fa {
         display: none;
       }
     }

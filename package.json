@@ -1,0 +1,7 @@
+{
+  "name": "meli",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "sh start-script.sh"
+  }
+}

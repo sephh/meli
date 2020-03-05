@@ -86,7 +86,7 @@ export default class ResponseHanlder {
         amount,
         currency: rawItem.currency_id
       },
-      picture: rawItem.thumbnail,
+      picture: rawItem.thumbnail.replace('-I.', '-N.'), // please not another request
       condition: rawItem.condition,
       free_shipping: rawItem.shipping.free_shipping,
       state_name: rawItem.address.state_name

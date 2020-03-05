@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom'
+import '../../styles/fontawesome'
 import Breadcrumbs from '../Breadcrumbs'
 
 const mockLinks = [
@@ -15,7 +15,7 @@ const mockLinks = [
 ]
 describe('Breadcumbs', () => {
   test('should render', () => {
-    const { getByText } = render(<Breadcrumbs links={mockLinks}/>, { wrapper: MemoryRouter })
+    const { getByText } = render(<Breadcrumbs links={mockLinks}/>)
     mockLinks.forEach((link)=>{
       const linkElement = getByText(link.label)
       expect(linkElement).toBeInTheDocument()

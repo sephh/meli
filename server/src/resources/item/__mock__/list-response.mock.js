@@ -26,7 +26,7 @@ export const RAW_DATA = {
       permalink:
         'https://articulo.mercadolibre.com.ar/MLA-758701025-vela-kayak-sail-118-cm-bolso-canoa-kayak-tabla-sup-inflable-_JM',
       thumbnail:
-        'http://mla-s2-p.mlstatic.com/679688-MLA31036336393_062019-I.jpg',
+        'http://mla-s2-p.mlstatic.com/679688-MLA31036336393_062019-N.jpg',
       accepts_mercadopago: true,
       installments: {
         quantity: 12,
@@ -120,12 +120,12 @@ export const PARSED_DATA = [
       {
         id: 'MLA758701025',
         title: 'Vela Kayak Sail 118 Cm Bolso Canoa Kayak Tabla Sup Inflable',
-        price: { amount: 1690.65, currency: 'ARS'},
+        price: { amount: 1690.65, currency: 'ARS' },
         picture:
-          'http://mla-s2-p.mlstatic.com/679688-MLA31036336393_062019-I.jpg',
+          'http://mla-s2-p.mlstatic.com/679688-MLA31036336393_062019-N.jpg',
         condition: 'new',
         free_shipping: false,
-        state_name: 'Buenos Aires',
+        state_name: 'Buenos Aires'
       }
     ],
     categories: { MLA411940: 1 }

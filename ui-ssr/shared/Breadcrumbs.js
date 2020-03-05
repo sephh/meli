@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import _ from 'lodash'
 import Link from 'next/link'
 import { withRouter } from 'next/router'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Breadcrumbs = ({ links }) => {
   return (
@@ -14,7 +15,9 @@ const Breadcrumbs = ({ links }) => {
             links.map(l => (
               <div className='breadcrumbs__item' key={l.url}>
                 <Link href={_.deburr(l.url)}><a>{l.label}</a></Link>
-                <span className="fas fa-chevron-right"/>
+                <FontAwesomeIcon
+                  icon={['fas','chevron-right']}
+                />
               </div>
             ))
           }
