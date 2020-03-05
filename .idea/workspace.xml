@@ -2,49 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33e7f0ef-c3f9-4509-819b-5c8caeebc26c" name="Default Changelist" comment="its the end">
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/start-script.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-ssr/__mock__/fileMock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-ssr/__mock__/item-response.mock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-ssr/__mock__/next-test-router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-ssr/__mock__/reducers.mock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-ssr/__mock__/styleMock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-ssr/jest-transforme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-ssr/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/fontawesome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-ssr/views/__test__/MainLayout.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/resources/item/__mock__/item-response.mock.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/resources/item/__mock__/item-response.mock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/resources/item/__mock__/list-response.mock.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/resources/item/__mock__/list-response.mock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/resources/item/response-handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/resources/item/response-handler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/__tests__/__snapshots__/snapshot.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/__tests__/snapshot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/__tests__/testing-library.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/components/ItemDetails/__tests__/ItemDetails.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/components/ItemDetails/__tests__/ItemDetails.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/components/ItemDetails/__tests__/ItemNotFound.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/components/ItemDetails/__tests__/ItemNotFound.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/components/ItemsCard/__tests__/Item.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/components/ItemsCard/__tests__/Item.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/components/ItemsCard/__tests__/ItemsCard.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/components/ItemsCard/__tests__/ItemsCard.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/components/SearchBar/__tests__/SearchBar.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/components/SearchBar/__tests__/SearchBar.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/filters/price.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/filters/price.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/reducers/__tests__/item.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/reducers/__tests__/item.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-ssr/components/ItemsCard/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/components/ItemsCard/Item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-ssr/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui-ssr/shared/Breadcrumbs.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/shared/Breadcrumbs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/shared/__tests__/Breadcrumbs.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/shared/__tests__/Breadcrumbs.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui-ssr/styles/import/components/_breadcrumbs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/styles/import/components/_breadcrumbs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/views/__test__/ProductDetailsView.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/views/__test__/ProductDetailsView.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/views/__test__/SearchBarView.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/views/__test__/SearchBarView.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/views/__test__/SearchResultsView.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/views/__test__/SearchResultsView.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ui/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ui/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,6 +81,7 @@
       <workItem from="1583269884485" duration="11142000" />
       <workItem from="1583300564031" duration="7933000" />
       <workItem from="1583362646179" duration="23621000" />
+      <workItem from="1583418759500" duration="3689000" />
     </task>
     <task id="LOCAL-00001" summary="workspace">
       <created>1583269944597</created>

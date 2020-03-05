@@ -19,7 +19,7 @@ const Item = ({ item }) => {
   }
 
   return (
-    <Link href={`/items/${item.id}`}>
+    <Link href={`/items/${item.id}`} prefetch={false}>
       <a className='item'>
         <div className='item__image'>
 
