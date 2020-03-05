@@ -1,13 +1,19 @@
 import React from 'react'
 import Link from 'next/link'
 
+import {
+  faExclamationTriangle
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 const ItemNotFound = () => {
   return (
     <div className='item-not-found'>
-      <div className='text-center'>
-        <span
-          className="fas fa-5x fa-exclamation-triangle"
-          data-testid="warningIcon"
+      <div className='text-center' data-testid="warningIcon">
+        <FontAwesomeIcon
+          color={"#999"}
+          icon={faExclamationTriangle}
+          size={'5x'}
         />
       </div>
 

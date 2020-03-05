@@ -15,7 +15,10 @@ export default {
       }
     } catch (e) {
       console.error(e)
-      throw e
+      return {
+        name: 'John',
+        lasname: 'Doe'
+      }
     }
   },
 
@@ -30,7 +33,11 @@ export default {
       }
     } catch (e) {
       console.error(e)
-      throw e
+      return {
+        ...price,
+        decimals: 2,
+        currency: '$'
+      }
     }
   },
 
@@ -41,7 +48,7 @@ export default {
       return plain_text || text
     } catch (e) {
       console.error(e)
-      throw e
+      return 'Oops. Looks like the seller forgot the description.'
     }
   },
 
@@ -62,7 +69,7 @@ export default {
       return path_from_root.map(p => p.name)
     } catch (e) {
       console.error(e)
-      throw e
+      return []
     }
   }
 }
