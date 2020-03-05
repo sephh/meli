@@ -6,6 +6,7 @@ import Breadcrumbs from '../shared/Breadcrumbs'
 import Loading from '../shared/Loading'
 import ItemDetails from '../components/ItemDetails'
 import ItemNotFound from '../components/ItemDetails/ItemNotFound'
+import { withRouter } from 'next/router'
 
 class ProductDetailsView extends Component {
   componentDidMount() {
@@ -13,8 +14,8 @@ class ProductDetailsView extends Component {
   }
 
   requestItems = () => {
-    const { getItem, match } = this.props
-    const { id } = match.params
+    const { getItem, router } = this.props
+    const { id } = router.query
 
     getItem(id)
   }
@@ -84,4 +85,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductDetailsView)
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(ProductDetailsView))

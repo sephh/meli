@@ -1,0 +1,8 @@
+.item-not-found{
+  &__message{
+    padding: $space-md 0 ;
+  }
+  .fas{
+    color: $medium-gray;
+  }
+}

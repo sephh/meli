@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import queryString from 'query-string'
 import _ from 'lodash'
 
 import item from '../reducers/item'
 import Breadcrumbs from '../shared/Breadcrumbs'
 import Loading from '../shared/Loading'
 import ItemsCard from '../components/ItemsCard'
+import { withRouter } from 'next/router'
 
 class SearchResultsView extends Component {
   componentDidMount() {
@@ -14,14 +14,14 @@ class SearchResultsView extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (!_.isEqual(this.props.location.search, prevProps.location.search)) {
+    if (!_.isEqual(this.props.router.query, prevProps.router.query)) {
       this.requestItems()
     }
   }
 
   requestItems = () => {
-    const { getItems, location } = this.props
-    const { search } = queryString.parse(location.search)
+    const { getItems, router } = this.props
+    const { search } = router.query
 
     getItems(search)
   }
@@ -80,4 +80,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchResultsView)
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(SearchResultsView))

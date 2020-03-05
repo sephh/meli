@@ -1,10 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33e7f0ef-c3f9-4509-819b-5c8caeebc26c" name="Default Changelist" comment="reducer tests 100%">
+    <list default="true" id="33e7f0ef-c3f9-4509-819b-5c8caeebc26c" name="Default Changelist" comment="ssr">
+      <change afterPath="$PROJECT_DIR$/ui-ssr/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/__tests__/__snapshots__/snapshot.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/__tests__/snapshot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/__tests__/testing-library.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/img/Logo_ML.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/img/Logo_ML@2x.png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/img/ic_Search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/img/ic_Search@2x.png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/img/ic_shipping.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/img/ic_shipping@2x.png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/App.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/_animations.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/_bootstrap-utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/_helpers.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/components/_breadcrumbs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/components/_button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/components/_input.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/components/_item-details.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/components/_item-not-found.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/components/_item.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/components/_items-card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/components/_loading.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/components/_search-bar-button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/import/components/_search-bar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/assets/style/reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/ItemDetails/ItemDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/ItemDetails/ItemNotFound.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/ItemDetails/__tests__/ItemDetails.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/ItemDetails/__tests__/ItemNotFound.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/ItemDetails/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/ItemsCard/Item.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/ItemsCard/ItemsCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/ItemsCard/__tests__/Item.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/ItemsCard/__tests__/ItemsCard.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/ItemsCard/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/SearchBar/SearchBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/SearchBar/SearchBarButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/SearchBar/__tests__/SearchBar.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/SearchBar/__tests__/SearchBarButton.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/components/SearchBar/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/config/jest/cssTransform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/environments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/filters/price.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/jest.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/next.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/pages/_app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/pages/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/pages/items/[id].js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/pages/items/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/reducers/__tests__/item.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/reducers/item.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/shared/Breadcrumbs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/shared/DelayedInput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/shared/Loading.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/shared/__tests__/Breadcrumbs.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/shared/__tests__/DelayedInput.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/shared/__tests__/Loading.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/global.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/_animations.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/_bootstrap-utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/_helpers.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/components/_breadcrumbs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/components/_button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/components/_input.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/components/_item-details.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/components/_item-not-found.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/components/_item.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/components/_items-card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/components/_loading.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/components/_search-bar-button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/import/components/_search-bar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/styles/reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/views/MainLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/views/ProductDetailsView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/views/SearchBarView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/views/SearchResultsView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/views/__test__/ProductDetailsView.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/views/__test__/SearchBarView.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-ssr/views/__test__/SearchResultsView.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/reducers/__tests__/item.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/reducers/__tests__/item.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/reducers/item.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/reducers/item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/views/ProductDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/views/ProductDetailsView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/views/SearchResultsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/views/SearchResultsView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +123,7 @@
   <component name="ProjectId" id="1YPWke1hqh4cPyGupyOx7EmGwae" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ui-ssr" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -41,6 +134,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ui-ssr" />
+      <recent name="$PROJECT_DIR$/ui-ssr/styles" />
+      <recent name="$PROJECT_DIR$/ui-ssr/public" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -66,7 +167,8 @@
       <updated>1582844853858</updated>
       <workItem from="1582844856753" duration="2498000" />
       <workItem from="1583269884485" duration="11142000" />
-      <workItem from="1583300564031" duration="7611000" />
+      <workItem from="1583300564031" duration="7933000" />
+      <workItem from="1583362646179" duration="5191000" />
     </task>
     <task id="LOCAL-00001" summary="workspace">
       <created>1583269944597</created>
@@ -113,6 +215,7 @@
     <MESSAGE value="ui tests 80%" />
     <MESSAGE value="ui tests 100%" />
     <MESSAGE value="reducer tests 100%" />
-    <option name="LAST_COMMIT_MESSAGE" value="reducer tests 100%" />
+    <MESSAGE value="ssr" />
+    <option name="LAST_COMMIT_MESSAGE" value="ssr" />
   </component>
 </project>

@@ -1,0 +1,41 @@
+.search-bar {
+  background-color: $brand-color;
+  height: 56px;
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    margin-right: 24px;
+    height: 36px;
+
+    img {
+      height: 36px;
+      width: auto;
+    }
+  }
+
+  &__input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .ml-input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .ml-btn {
+      border-left: none;
+
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &__input {
+    flex: 1;
+  }
+
+  &__button {
+  }
+}
