@@ -8,6 +8,7 @@ As SEO is a requisite, the default build is SSR, but a CSR version is also avail
 
 * You should have internet connection to run all API tests.
 * You should be able to run a .sh file on the terminal
+* You should have ports 4200 and 3000 available
 
 To install and launching this app follow this steps:
 
