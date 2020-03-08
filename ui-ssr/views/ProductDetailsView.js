@@ -43,7 +43,7 @@ class ProductDetailsView extends Component {
         }
 
         {
-          !selectedItem && !loading &&
+          (!selectedItem && !loading) &&
           <ItemNotFound/>
         }
 

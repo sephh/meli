@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33e7f0ef-c3f9-4509-819b-5c8caeebc26c" name="Default Changelist" comment="its the end">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/resources/item/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/resources/item/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/components/ItemDetails/ItemNotFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/components/ItemDetails/ItemNotFound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-ssr/styles/fontawesome.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/styles/fontawesome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-ssr/views/ProductDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui-ssr/views/ProductDetailsView.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,9 +27,15 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1YPWke1hqh4cPyGupyOx7EmGwae" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Projetos/front_portal_tqi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -54,18 +56,6 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -82,6 +72,7 @@
       <workItem from="1583362646179" duration="23621000" />
       <workItem from="1583418759500" duration="3689000" />
       <workItem from="1583423196253" duration="953000" />
+      <workItem from="1583696694084" duration="207000" />
     </task>
     <task id="LOCAL-00001" summary="workspace">
       <created>1583269944597</created>
