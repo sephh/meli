@@ -46,7 +46,7 @@
     "eslint-plugin-standard": "^3.1.0",
     "jest": "^23.6.0",
     "mock-req-res": "^1.0.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.18.3",
     "prettier": "^1.15.2",
     "rimraf": "^2.6.2",
